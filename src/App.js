@@ -16,9 +16,9 @@ function App() {
           <button onClick={() => dispatch(deletAll())}>deletAll</button>
           {count.todolist.map((value, index)=> {
             return(
-              <div key={index}>
-                <p>{value}</p>
-                <button onClick={() => dispatch(deleteText(index))}>delete</button>
+              <div className='list' key={index}>
+                {value}
+                <button className='delete' onClick={() => dispatch(deleteText(index))}>delete</button>
               </div>
             )
           })}
